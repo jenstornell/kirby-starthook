@@ -1,4 +1,10 @@
 <?php
+class starthook {
+	public static function return($args = array()) {
+		kirby()->set('option', 'starthook', $args);
+	}
+}
+
 class starthookController extends Kirby\Component\Template {
 	public function data($page, $data = []) {
 		if($page instanceof Page) {

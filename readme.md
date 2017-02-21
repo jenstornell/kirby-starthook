@@ -2,11 +2,11 @@
 
 *Version 0.1*
 
-With the starthook you will have access to the page object directly from your `config.php` file.
+- You will have access to the page object directly from your `config.php` file.
 
-You can pass global data to your templates and snippets.
+- You can pass global data to your templates and snippets.
 
-You can also do redirects on certain conditions.
+- You can do redirects on certain conditions.
 
 **[How to install Kirby Starthook](docs/install.md)**
 

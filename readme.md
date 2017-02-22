@@ -2,17 +2,15 @@
 
 *Version 0.1*
 
-- You will have access to the page object directly from your `config.php` file.
-
+- You will have access to `$page` directly from your `config.php` file.
 - You can pass global data to your templates and snippets.
-
 - You can do redirects on certain conditions.
 
 **[How to install Kirby Starthook](docs/install.md)**
 
 ## Usage
 
-Put your starthook code into the `config.php` file.
+Put your starthook code into the `config.php` file or in a plugin.
 
 ### Example 1
 

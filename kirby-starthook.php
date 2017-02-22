@@ -10,14 +10,14 @@ class starthookController extends Kirby\Component\Template {
 		if($page instanceof Page) {
 			kirby()->trigger('starthook', array($page));
 
-			$global_hook = kirby()->get('option', 'starthook');
-			$global_hook = (is_array($global_hook)) ? $global_hook : array();
+			$starthook = kirby()->get('option', 'starthook');
+			$starthook = (is_array($starthook)) ? $starthook : array();
 
 			$data = array_merge(
 				$page->templateData(), 
 				$data,
 				$page->controller($data),
-				$global_hook
+				$starthook
 			);
 		}
 

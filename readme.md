@@ -1,6 +1,6 @@
 # Kirby Starthook
 
-*Version 0.1*
+*Version 0.2*
 
 - You will have access to `$page` directly from your `config.php` file.
 - You can pass global data to your templates and snippets.
@@ -19,11 +19,11 @@ Put your starthook code into the `config.php` file or in a plugin.
 The data that is returned here can later be used in all your templates and snippets:
 
 ```php
-kirby()->hook('starthook', function($page) {
-  starthook::return(array(
-    'foo' => 'my first template variable',
+c::set('starthook', function($page) {
+  return array(
+    'foo' => 'my first template variable ' . $page->title(),
     'bar' => 'my second template variable'
-  ));
+  );
 });
 ```
 
@@ -34,7 +34,7 @@ kirby()->hook('starthook', function($page) {
 On a condition, redirect to another page.
 
 ```php
-kirby()->hook('starthook', function($page) {
+c::set('starthook', function($page) {
   if($page->title() == 'Project A') {
     go(page('projects'), 301);
   }
@@ -42,6 +42,10 @@ kirby()->hook('starthook', function($page) {
 ```
 
 ## Changelog
+
+**0.2**
+
+- Changed from using hooks to using config instead.
 
 **0.1**
 
@@ -64,3 +68,4 @@ It is discouraged to use this plugin in any project that promotes racism, sexism
 ## Credits
 
 - [Jens Törnell](https://github.com/jenstornell)
+- [Lukas Bestle](https://github.com/lukasbestle) - For this [solution](https://forum.getkirby.com/t/kirby-starthook-pass-global-data-to-your-templates-and-snippets/6710/4)

@@ -1,6 +1,6 @@
 {
   "name": "kirby-starthook",
-  "version": "0.1",
+  "version": "0.2",
   "description": "Pass global data to your templates and snippets",
   "license": "MIT",
   "type": "kirby-plugin"

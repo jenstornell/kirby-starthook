@@ -27,6 +27,8 @@ c::set('starthook', function($page) {
 });
 ```
 
+**Note:** This plugin only provides access to the `$page` object, whereas `$site` and `$pages` may be accessed with `site()` and `site()->children()`.
+
 ### Example 2
 
 **Redirect on condition**
